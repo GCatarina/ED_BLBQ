@@ -62,13 +62,11 @@ symmetry sector in which the calculations are done, DeltaE sets the energy range
 ## Example of usage
 
 1) Excitation spectrum (within the range of 50 mev) of an N=5 spin-1 open chain, with J = 18.4 meV and 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\beta&space;=&space;0.085" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\beta&space;=&space;0.085" title="\beta = 0.085" /></a>.
+<a href="https://www.codecogs.com/eqnedit.php?latex=\beta&space;=&space;0.085" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\beta&space;=&space;0.085" title="\beta = 0.085" /></a> (note: for spin-1 chains, we know that we can obtain all energy levels in the symmetry sector with 
+<a href="https://www.codecogs.com/eqnedit.php?latex=S^z&space;=&space;0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?S^z&space;=&space;0" title="S^z = 0" /></a>)
 ```
 python excE_S2.py 1 5 18.4 0.085 0 0 50 10
 ```
-
-Note: for spin-1 chains, we know that we can obtain all energy levels in the symmetry sector with 
-<a href="https://www.codecogs.com/eqnedit.php?latex=S^z&space;=&space;0." target="_blank"><img src="https://latex.codecogs.com/gif.latex?S^z&space;=&space;0." title="S^z = 0." /></a>
 
 2) Same as in 1 for a cyclic chain.
 ```
