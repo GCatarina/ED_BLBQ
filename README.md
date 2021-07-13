@@ -33,7 +33,7 @@ for the corresponding eigenstates.
 for eigenstates.
 
 3) The codes 'ssw_S0GS.py' and 'ssw_S1GS.py' compute the spin spectral weights of excitations from a ground state with total spin S=0 and S=1, respectively. 
-The spin spectral weight at site i for the state M' is formally defined as
+The spin spectral weight at site i for the eigenstate M' is formally defined as
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\mathcal{S}_{M'}(i)&space;=&space;\sum_M&space;P_M&space;\sum_{\alpha=x,y,z}&space;|\langle&space;M&space;|&space;S^a_i&space;|&space;M'&space;\rangle&space;|^2," target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mathcal{S}_{M'}(i)&space;=&space;\sum_M&space;P_M&space;\sum_{\alpha=x,y,z}&space;|\langle&space;M&space;|&space;S^a_i&space;|&space;M'&space;\rangle&space;|^2," title="\mathcal{S}_{M'}(i) = \sum_M P_M \sum_{\alpha=x,y,z} |\langle M | S^a_i | M' \rangle |^2," /></a>
 
@@ -43,7 +43,7 @@ denotes the equilibrium occupation of the state M.
 This calculation is done at zero temperature, so that 
 <a href="https://www.codecogs.com/eqnedit.php?latex=P_M" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P_M" title="P_M" /></a>
 is the inverse of the ground state degeneracy for the ground states, and zero for all other eigenstates.
-It must also be noted that a selection rule imposes that the spin spectral weights can only be non-zero if the total spins of the ground state and the state M' differ from 0,+-1.
+It must also be noted that a selection rule imposes that the spin spectral weights can only be non-zero if the total spins of the ground state and the eigenstate M' differ from 0,+-1.
 
 ## Code inputs
 
