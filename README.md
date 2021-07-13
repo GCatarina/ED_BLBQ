@@ -78,7 +78,7 @@ python excE_S2.py 1 5 18.4 0.085 1 0 50 10
 3) Average magnetization of the first 3 eigenstates with 
 <a href="https://www.codecogs.com/eqnedit.php?latex=S^z&space;=&space;&plus;1," target="_blank"><img src="https://latex.codecogs.com/gif.latex?S^z&space;=&space;&plus;1," title="S^z = +1," /></a> for the same model as in 1.
 ```
-python Szi.py 1 5 18.4 0.085 0 1 2
+python Szi.py 1 5 18.4 0.085 0 1 3
 ```
 
 4) Spin spectral weigths of all allowed excitations within the range of 50 meV, for the same model as in 1 (note: we already know that this model gives a ground state with S=1).
