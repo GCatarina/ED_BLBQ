@@ -79,12 +79,12 @@ python excE_S2.py 1 5 18.4 0.085 1 0 50 10
 python Szi.py 1 5 18.4 0.085 0 1 3
 ```
 
-4) Spin spectral weigths of all allowed excitations within the range of 50 meV, for the same model as in 1 (note: we already know that this model gives a ground state with S=1).
+4) Spin spectral weigths of all allowed excitations within the range of 50 meV, for the same model as in 1 (note: from the output of 1, we already know that this model gives a ground state with S=1).
 ```
 python ssw_S1GS.py 1 5 18.4 0.085 0 50 30
 ```
 
-5) Spin spectral weigths of all allowed excitations within the range of 50 meV, for the same model as in 2 (note: we already know that this model gives a ground state with S=0).
+5) Spin spectral weigths of all allowed excitations within the range of 50 meV, for the same model as in 2 (note: from the output of 2, we already know that this model gives a ground state with S=0).
 ```
 python ssw_S0GS.py 1 5 18.4 0.085 1 50 30
 ```
