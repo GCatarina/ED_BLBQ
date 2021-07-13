@@ -43,7 +43,7 @@ denotes the equilibrium occupation of the state M.
 This calculation is done at zero temperature, so that 
 <a href="https://www.codecogs.com/eqnedit.php?latex=P_M" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P_M" title="P_M" /></a>
 is the inverse of the ground state degeneracy for the ground states, and zero for all other eigenstates.
-It must also be noted that a selection rule imposes that the spin spectral weights can only be non-zero if the total spin of the ground state and the state M' differ from 0,+-1.
+It must also be noted that a selection rule imposes that the spin spectral weights can only be non-zero if the total spins of the ground state and the state M' differ from 0,+-1.
 
 ## Code inputs
 
