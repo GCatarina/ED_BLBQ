@@ -67,11 +67,12 @@ symmetry sector in which the calculations are done, DeltaE sets the energy range
 python excE_S2.py 1 5 18.4 0.085 0 0 50 10
 ```
 
-Note: for spin-1 chains, we know that we can obtain all energy levels by setting Sz=0.
+Note: for spin-1 chains, we know that we can obtain all energy levels in the symmetry sector with 
+<a href="https://www.codecogs.com/eqnedit.php?latex=S^z&space;=&space;0." target="_blank"><img src="https://latex.codecogs.com/gif.latex?S^z&space;=&space;0." title="S^z = 0." /></a>
 
 2) Same as in 1 for a cyclic chain.
 ```
-python excE_S2.py 1 5 18.4 0.085 0 0 50 10
+python excE_S2.py 1 5 18.4 0.085 1 0 50 10
 ```
 
 3) Average magnetization of the first 3 eigenstates with 
