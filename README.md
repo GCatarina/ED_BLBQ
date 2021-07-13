@@ -55,7 +55,7 @@ and a variable BC that can be set to 0 (1) for open (periodic) boundary conditio
 
 ### Other parameters
 
-In addition, the codes also have as inputs some of the following "other parameters": Sz denotes the 
+In addition, the codes also have as inputs some of the following parameters: Sz denotes the 
 <a href="https://www.codecogs.com/eqnedit.php?latex=S^z" target="_blank"><img src="https://latex.codecogs.com/gif.latex?S^z" title="S^z" /></a>
 symmetry sector in which the calculations are done, DeltaE sets the energy range for the excitations, nLanczos is the number of Lanczos vectors used in the diagonalization routine, and neigen is the number of eigenstates considered.
 
