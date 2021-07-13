@@ -32,7 +32,7 @@ for the corresponding eigenstates.
 <a href="https://www.codecogs.com/eqnedit.php?latex=S^z_i" target="_blank"><img src="https://latex.codecogs.com/gif.latex?S^z_i" title="S^z_i" /></a>
 for eigenstates.
 
-3) The codes 'ssw_S0GS.py' and 'ssw_S1GS.py' compute the spin spectral weight for excitations from a ground state with total spin S=0 and S=1, respectively. 
+3) The codes 'ssw_S0GS.py' and 'ssw_S1GS.py' compute the spin spectral weights of excitations from a ground state with total spin S=0 and S=1, respectively. 
 The spin spectral weight at site i for the state M' is formally defined as
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\mathcal{S}_{M'}(i)&space;=&space;\sum_M&space;P_M&space;\sum_{\alpha=x,y,z}&space;|\langle&space;M&space;|&space;S^a_i&space;|&space;M'&space;\rangle&space;|^2," target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mathcal{S}_{M'}(i)&space;=&space;\sum_M&space;P_M&space;\sum_{\alpha=x,y,z}&space;|\langle&space;M&space;|&space;S^a_i&space;|&space;M'&space;\rangle&space;|^2," title="\mathcal{S}_{M'}(i) = \sum_M P_M \sum_{\alpha=x,y,z} |\langle M | S^a_i | M' \rangle |^2," /></a>
@@ -43,26 +43,49 @@ denotes the equilibrium occupation of the state M.
 This calculation is done at zero temperature, so that 
 <a href="https://www.codecogs.com/eqnedit.php?latex=P_M" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P_M" title="P_M" /></a>
 is the inverse of the ground state degeneracy for the ground states, and zero for all other eigenstates.
+It must also be noted that a selection rule imposes that the spin spectral weights can only be non-zero if the total spin of the ground state and the state M' differ from 0,+-1.
 
 ## Code inputs
 
-<ins>text</ins>:
+### Physical parameters
+
 All codes take as inputs the following "physical parameters": s, N, J, 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\beta" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\beta" title="\beta" /></a> 
 and a variable BC that can be set to 0 (1) for open (periodic) boundary conditions.
 
+### Other parameters
 
-In addition, all codes also take as inputs the number of excited states ('nexc') and the number of Lanczos vectors for the diagonalization routine ('nLanczos'). These variables are called "other parameters" and can also be changed in the source codes.
-
-Finally, the codes "te_S2.py" and "localSz.py" also allow to choose the 
+In addition, the codes also have as inputs some of the following "other parameters": Sz denotes the 
 <a href="https://www.codecogs.com/eqnedit.php?latex=S^z" target="_blank"><img src="https://latex.codecogs.com/gif.latex?S^z" title="S^z" /></a>
-sector in which the calculations are done. This variable ('Sz') is also in the group of "other parameters" and can be changed in the source codes.
+symmetry sector in which the calculations are done, DeltaE sets the energy range for the excitations, nLanczos is the number of Lanczos vectors used in the diagonalization routine, and neigen is the number of eigenstates considered.
 
 ## Example of usage
-We now provide a representative example of usage of all codes.
-We consider an N=9 spin-1 (s=1) chain, with J=18.4 [meV] and beta=0.085.
 
-First, we run the "te_S2.py" code for both BC=0,1. 
-For spin-1 chains, we know that all eigenstates can be obtained within the Sz=0 sector, and therefore we set Sz=0.
-For BC=0 (1), we also set nexc=50, nLanczos=51 (nexc=10, nLanczos=11).
+1) Excitation spectrum (within the range of 50 mev) of an N=5 spin-1 open chain, with J = 18.4 meV and 
+<a href="https://www.codecogs.com/eqnedit.php?latex=\beta&space;=&space;0.085" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\beta&space;=&space;0.085" title="\beta = 0.085" /></a>.
+```
+python excE_S2.py 1 5 18.4 0.085 0 0 50 10
+```
 
+Note: for spin-1 chains, we know that we can obtain all energy levels by setting Sz=0.
+
+2) Same as in 1 for a cyclic chain.
+```
+python excE_S2.py 1 5 18.4 0.085 0 0 50 10
+```
+
+3) Average magnetization of the first 3 eigenstates with 
+<a href="https://www.codecogs.com/eqnedit.php?latex=S^z&space;=&space;&plus;1," target="_blank"><img src="https://latex.codecogs.com/gif.latex?S^z&space;=&space;&plus;1," title="S^z = +1," /></a> for the same model as in 1.
+```
+python Szi.py 1 5 18.4 0.085 0 1 2
+```
+
+4) Spin spectral weigths of all allowed excitations within the range of 50 meV, for the same model as in 1 (note: we already know that this model gives a ground state with S=1).
+```
+python ssw_S1GS.py 1 5 18.4 0.085 0 50 20
+```
+
+5) Spin spectral weigths of all allowed excitations within the range of 50 meV, for the same model as in 2 (note: we already know that this model gives a ground state with S=0).
+```
+python ssw_S0GS.py 1 5 18.4 0.085 1 50 20
+```
