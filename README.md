@@ -32,7 +32,7 @@ for the corresponding eigenstates.
 <a href="https://www.codecogs.com/eqnedit.php?latex=S^z_i" target="_blank"><img src="https://latex.codecogs.com/gif.latex?S^z_i" title="S^z_i" /></a>
 for eigenstates.
 
-3) The codes 'ssw_S0GS.py' and 'ssw_S1GS.py' compute the spin spectral weight for transitions from a ground state with total spin S=0 and S=1, respectively. 
+3) The codes 'ssw_S0GS.py' and 'ssw_S1GS.py' compute the spin spectral weight for excitations from a ground state with total spin S=0 and S=1, respectively. 
 The spin spectral weight at site i for the state M' is formally defined as
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\mathcal{S}_{M'}(i)&space;=&space;\sum_M&space;P_M&space;\sum_{\alpha=x,y,z}&space;|\langle&space;M&space;|&space;S^a_i&space;|&space;M'&space;\rangle&space;|^2," target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mathcal{S}_{M'}(i)&space;=&space;\sum_M&space;P_M&space;\sum_{\alpha=x,y,z}&space;|\langle&space;M&space;|&space;S^a_i&space;|&space;M'&space;\rangle&space;|^2," title="\mathcal{S}_{M'}(i) = \sum_M P_M \sum_{\alpha=x,y,z} |\langle M | S^a_i | M' \rangle |^2," /></a>
@@ -45,10 +45,12 @@ This calculation is done at zero temperature, so that
 is the inverse of the ground state degeneracy for the ground states, and zero for all other eigenstates.
 
 ## Code inputs
-All codes take as inputs the following parameters: J, 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\beta" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\beta" title="\beta" /></a>, 
-s, N and a variable BC that should be set to 0 (1) for open (periodic) boundary conditions.
-These variables are called "physical parameters" and can be changed in the source codes.
+
+<ins>text</ins>:
+All codes take as inputs the following "physical parameters": s, N, J, 
+<a href="https://www.codecogs.com/eqnedit.php?latex=\beta" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\beta" title="\beta" /></a> 
+and a variable BC that can be set to 0 (1) for open (periodic) boundary conditions.
+
 
 In addition, all codes also take as inputs the number of excited states ('nexc') and the number of Lanczos vectors for the diagonalization routine ('nLanczos'). These variables are called "other parameters" and can also be changed in the source codes.
 
