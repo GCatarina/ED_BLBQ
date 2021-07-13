@@ -15,7 +15,7 @@ where J is the exchange coupling,
 is a parameter that determines the relative strength between the bilinear and biquadratic terms, and
 <a href="https://www.codecogs.com/eqnedit.php?latex=\bold{S}_i" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\bold{S}_i" title="\bold{S}_i" /></a>
 denote spin-s operators at site i.
-The sum over i runs from 1 to N-1 (N mod N) for open (periodic) boundary conditions, where N is the size of the spin chain.
+The sum over i runs from 1 to N-1 (N mod N) for open (periodic) boundary conditions, where N is the length of the spin chain.
 
 # Code usage
 
